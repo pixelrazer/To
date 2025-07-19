@@ -2,10 +2,10 @@ const heart = document.querySelector('.heart');
         let clickCount = 0;
 
         const content = [
-            "She always makes me smile.",
-            "She's so strong and brave.",
-            "She cares deeply, even when she hides it.",
-            "She makes me feel loved like no one else ever has."
+            "The way she acts like a playful little kid around me like I’m her safe place.",
+            "Her laugh is so contagious, it pulls me out of any bad mood instantly.",
+            "Her smile lights up even the darkest room.",
+            "She acts tough, but deep down she’s the sweetest, most loving soul I’ve ever known."
         ];
 
         heart.addEventListener('click', () => {
@@ -39,7 +39,7 @@ const heart = document.querySelector('.heart');
                     const letter = document.createElement('div');
                     letter.className = 'letter';
                     letter.innerHTML = `
-                        <h2>Happy Two-Month Anniversary, baby!!,</h2>
+                        <h2>Happy Two-Month Anniversary baby!!,</h2>
                         <p>
                             I can't believe it's already been two months since we found each other on that app. So much has happened since then and yet, every moment with you still feels new and magical.
                         </p>
