@@ -40,9 +40,9 @@ const heart = document.querySelector('.heart');
                     const letter = document.createElement('div');
                     letter.className = 'letter';
                     letter.innerHTML = `
-                        <h2>Happy Two-Month Anniversary baby!!,</h2>
+                        <h2>Happy Three-Months Anniversary baby!!,</h2>
                         <p>
-                            I can't believe it's already been two months since we found each other on that app. So much has happened since then and yet, every moment with you still feels new and magical.
+                            I can't believe it's already been three months since we found each other on that app. So much has happened since then and yet, every moment with you still feels new and magical.
                         </p>
                         <p>
                             When I think of you, I feel warmth in my chest and peace in my soul. You've shown me what it truly means to love and be loved in return. Your laugh is my favorite sound. Your happiness is my greatest joy. In a world full of temporary things, you are my constant.
