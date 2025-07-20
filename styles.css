@@ -10,10 +10,12 @@
     align-items: center;
     text-align: center;
     animation: beat 2s infinite;
-    overflow: hidden;
+    overflow: visible;
     padding: 40px 60px;
     box-sizing: border-box;
     cursor: pointer;
+    position: relative;
+    z-index: 10;
 }
 
 .heart p, .heart h1 {
@@ -37,6 +39,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: visible;
+}
+
+.heart-wrapper {
+    position: relative;
+    padding: 50px; /* Reduced padding since tulips are now positioned better */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body, html {
@@ -44,6 +56,7 @@ body, html {
     margin: 0;
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 @keyframes beat {
@@ -68,6 +81,7 @@ body, html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 10;
 }
 
 .envelope:hover {
@@ -129,6 +143,8 @@ body, html {
     text-align: left;
     border-radius: 10px;
     animation: fadeIn 0.5s ease-in;
+    position: relative;
+    z-index: 10;
 }
 
 .letter h2 {
@@ -145,4 +161,181 @@ body, html {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tulip Styles */
+.tulip {
+    position: absolute;
+    width: 60px;
+    height: 120px;
+    animation: sway 4s ease-in-out infinite;
+}
+
+.tulip-stem {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 80px;
+    background: linear-gradient(to bottom, #4a7c59, #2d5016);
+    border-radius: 2px;
+}
+
+.tulip-flower {
+    position: absolute;
+    bottom: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 40px;
+    background: linear-gradient(45deg, #ff69b4, #ff1493, #dc143c);
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 2px 8px rgba(220, 20, 60, 0.3);
+}
+
+.tulip-flower::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -8px;
+    width: 20px;
+    height: 35px;
+    background: linear-gradient(45deg, #ff1493, #ff69b4);
+    border-radius: 10px 10px 0 0;
+    transform: rotate(-15deg);
+}
+
+.tulip-flower::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    width: 20px;
+    height: 35px;
+    background: linear-gradient(45deg, #ff1493, #ff69b4);
+    border-radius: 10px 10px 0 0;
+    transform: rotate(15deg);
+}
+
+.tulip-leaf {
+    position: absolute;
+    bottom: 30px;
+    width: 8px;
+    height: 25px;
+    background: linear-gradient(to bottom, #4a7c59, #2d5016);
+    border-radius: 0 4px 4px 0;
+    transform-origin: bottom;
+}
+
+.tulip-leaf.left {
+    left: 20px;
+    transform: rotate(-30deg);
+}
+
+.tulip-leaf.right {
+    right: 20px;
+    transform: rotate(30deg);
+}
+
+/* Heart tulips positioning - positioned relative to heart-wrapper */
+.heart-wrapper .tulip.heart-left {
+    top: 1%;
+    left: 1%;
+    animation-delay: 0s;
+    z-index: 1;
+}
+
+.heart-wrapper .tulip.heart-right {
+    top: 1%;
+    right: 1%;
+    animation-delay: 1s;
+    z-index: 1;
+}
+
+.heart-wrapper .tulip.heart-left-2 {
+    top: 50%;
+    left: 5%;
+    animation-delay: 0.5s;
+    transform: scale(0.8);
+    z-index: 1;
+}
+
+.heart-wrapper .tulip.heart-right-2 {
+    top: 60%;
+    right: 5%;
+    animation-delay: 1.5s;
+    transform: scale(0.9);
+    z-index: 1;
+}
+
+/* Letter tulips positioning - positioned around the letter */
+.letter .tulip.letter-left {
+    top: 10%;
+    left: -70px;
+    animation-delay: 0.3s;
+}
+
+.letter .tulip.letter-right {
+    top: 15%;
+    right: -70px;
+    animation-delay: 0.8s;
+}
+
+.letter .tulip.letter-left-2 {
+    top: 40%;
+    left: -80px;
+    animation-delay: 1.2s;
+    transform: scale(0.85);
+}
+
+.letter .tulip.letter-right-2 {
+    top: 50%;
+    right: -80px;
+    animation-delay: 1.7s;
+    transform: scale(0.9);
+}
+
+.letter .tulip.letter-left-3 {
+    bottom: 20%;
+    left: -75px;
+    animation-delay: 2s;
+    transform: scale(0.75);
+}
+
+.letter .tulip.letter-right-3 {
+    bottom: 15%;
+    right: -75px;
+    animation-delay: 2.3s;
+    transform: scale(0.8);
+}
+
+@keyframes sway {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(2deg);
+    }
+    75% {
+        transform: rotate(-2deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .heart-wrapper {
+        padding: 30px; /* Smaller padding on mobile */
+    }
+    
+    .heart {
+        width: 300px; /* Smaller heart on mobile */
+    }
+    
+    .heart-wrapper .tulip {
+        transform: scale(0.6);
+    }
+    
+    .letter .tulip {
+        display: none;
+    }
 }
