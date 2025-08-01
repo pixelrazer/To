@@ -71,7 +71,8 @@ const heart = document.querySelector('.heart');
                             I'll always support you and stand by your side. That night we made promises to each other intimate, vulnerable, meaningful promises and I meant every single one.
                         </p>
                         <p>
-                            Thank you for being with me. I know I'm not always easy to understand. I overthink a lot, even over the smallest things. But thank you for staying. Thank you for coming to see me. Thank you for everything you do for us.
+                            Thank you for being with me. I know I'm not always easy to understand. I overthink a lot, even over the smallest things. I know there might be times where I give you a hard time or stress you out and I don't mean to at all.  
+                            But thank you for staying and thank you for putting up with me. Thank you for coming to see me. Thank you for everything you do for us.
                         </p>
                         <p>
                             I love you so much, mi amor. I'll never give up on us, or on you. I'll work hard for us, and I'll give you the life you were meant to have.
